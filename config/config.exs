@@ -9,13 +9,13 @@ import Config
 
 # Configure your database
 config :slax, Slax.Repo,
- username: "sneaky",
- password: "",
- hostname: "localhost",
- database: "slax_dev",
- stacktrace: true,
- show_sensitive_data_on_connection_error: true,
- pool_size: 10
+  username: "sneaky",
+  password: "",
+  hostname: "localhost",
+  database: "slax_dev",
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
 
 config :slax,
   ecto_repos: [Slax.Repo],
