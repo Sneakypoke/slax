@@ -12,7 +12,12 @@ defmodule Slax.Chat.Room do
   @doc false
   def changeset(room, attrs) do
     room
-    |> cast(attrs, [:name, :topic])
+    |> validate_required(:name)
+    |> validate_length(:name, max: 80)
+    |> validate_format(:name, ~r/\A[a-z0-9-]+\z/,
+      message: "can only contain lowercase letters, numbers and dashes"
+    )
+    |> validate_length(:topic, max: 200)
     |> validate_required([:name, :topic])
   end
 end
