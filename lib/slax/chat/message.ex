@@ -5,7 +5,6 @@ defmodule Slax.Chat.Message do
   alias Slax.Accounts.User
   alias Slax.Chat.Room
 
-
   schema "messages" do
     field :body, :string
     belongs_to :room, Room
